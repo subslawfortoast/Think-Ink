@@ -1,0 +1,60 @@
+/*Page Base*/
+body{
+    font-family: 'Gloria Hallelujah', cursive;
+
+    background-color: #629c6f;
+
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+
+    border: 10px solid #34633f;
+}
+
+/*Title*/
+h1{
+    font-size: 3rem;
+    color: #1f3528;
+
+    transform: rotate(-1deg);
+
+    margin-bottom: 50px;
+
+    letter-spacing: 2px;
+}
+
+/*Button Container*/
+.menu{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.4rem;
+
+    transform: rotate(0.5deg);
+
+    padding: 14px 32px;
+
+    border: 2px solid #2c5140;
+    border-radius: 14px;
+
+    background-color: #88cf98;
+    color: #2c5140;
+
+    cursor: pointer;
+
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease,
+                background-color 0.15s ease;
+}
+
+/*Button Hover*/
+button:hover{
+    transform: translateY(-4px);
+
+    background-color: #41735c;
+
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.18);
+}
