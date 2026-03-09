@@ -17,7 +17,17 @@ body{
 }
 
 /*Title*/
-h1{
+.title{
+    font-size: 5rem;
+    color: #1f3528;
+
+    transform: rotate(1deg);
+
+    margin: 0;
+}
+
+/*Slogan*/
+.slogan{
     font-size: 3rem;
     color: #1f3528;
 
