@@ -38,16 +38,25 @@ body{
     letter-spacing: 2px;
 }
 
-/*Button Container*/
+/*Clickable-Box Container*/
 .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+}
+
+/*Clickable-Box Style*/
+.menu-box{
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 1.4rem;
 
-    transform: rotate(0.5deg);
+    transform: rotate(-0.7deg);
 
-    padding: 14px 32px;
+    padding: 24px 64px;
 
-    border: 2px solid #2c5140;
+    border: 3px solid #2c5140;
     border-radius: 14px;
 
     background-color: #88cf98;
@@ -55,14 +64,18 @@ body{
 
     cursor: pointer;
 
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+
     transition: transform 0.15s ease,
                 box-shadow 0.15s ease,
                 background-color 0.15s ease;
 }
 
 /*Button Hover*/
-button:hover{
-    transform: translateY(-4px);
+.menu-box:hover{
+    transform: rotate(0.5deg) translateY(-4px) scale(1.02);
 
     background-color: #41735c;
 
