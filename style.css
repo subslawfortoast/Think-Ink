@@ -95,3 +95,8 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+/*Home Hover (no transformation)*/
+.home-button:hover{
+    transform:none
+}
