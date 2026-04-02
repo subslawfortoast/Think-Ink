@@ -74,7 +74,7 @@ body{
 }
 
 /*Button Hover*/
-.menu-box.no-hover:hover{
+.menu-box:not(.no-hover):hover{
     transform: rotate(0.5deg) translateY(-4px) scale(1.02);
 
     background-color: #41735c;
