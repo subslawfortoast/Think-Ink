@@ -2,7 +2,7 @@
 .DS_Store
 Thumbs.db
 
-# Ignore Node.js stuff if you ever use it
+# Ignore Node.js
 node_modules/
 
 # Ignore environment files
@@ -11,6 +11,4 @@ node_modules/
 # Ignore log files
 *.log
 
-# Ignore build/dist folders if you add them later
-dist/
-build/
+.vs/

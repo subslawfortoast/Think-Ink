@@ -1,0 +1,24 @@
+{
+  "name": "think-ink",
+  "version": "1.0.0",
+  "description": "**Think Ink** is a multiplayer Pictionary-style game where one player draws and the other guesses. Ink the sketch, think the guess!",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subslawfortoast/Think-Ink.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subslawfortoast/Think-Ink/issues"
+  },
+  "homepage": "https://github.com/subslawfortoast/Think-Ink#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  }
+}
