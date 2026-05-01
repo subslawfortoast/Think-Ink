@@ -1,0 +1,106 @@
+/*Page Base*/
+body{
+    font-family: 'Gloria Hallelujah', cursive;
+
+    background-color: #629c6f;
+
+    margin: 0;
+    height: 100vh;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+
+    border: 20px solid #34633f;
+}
+
+/*Title*/
+.title{
+    font-size: 5rem;
+    color: #1f3528;
+
+    transform: rotate(1deg);
+
+    margin: 0;
+}
+
+/*Slogan*/
+.slogan{
+    font-size: 3rem;
+    color: #1f3528;
+
+    transform: rotate(-1deg);
+
+    margin-bottom: 50px;
+
+    letter-spacing: 2px;
+}
+
+/*Clickable-Box Container*/
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+}
+
+/*Clickable-Box Style*/
+.menu-box{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.4rem;
+
+    transform: rotate(-0.7deg);
+
+    padding: 24px 64px;
+
+    border: 3px solid #2c5140;
+    border-radius: 14px;
+
+    background-color: #88cf98;
+    color: #2c5140;
+
+    cursor: pointer;
+
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease,
+                background-color 0.15s ease;
+}
+
+/*Button Hover - color & shadow*/
+.menu-box:not(.no-hover):hover{
+    background-color: #41735c;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.18);
+}
+
+/*Button Hover - tilt & lift motion*/
+.menu-box:not(.no-hover):hover{
+    transform: rotate(0.5deg) translateY(-4px) scale(1.02);
+}
+
+/*Home Redirection*/
+.home-button{
+    position: absolute;
+    top: 25px;
+    left:25px;
+
+    padding: 8px 10px;
+    transform: rotate(0deg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Home Hover (no transformation)*/
+.menu-box.home-button:hover{
+    transform: none;
+}
