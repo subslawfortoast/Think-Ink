@@ -67,8 +67,8 @@ socket.on("joinGame", (code) => {
 });
 
 // drawing (scoped to room)
-  socket.on("draw", ({ code, x, y }) => {
-    socket.to(code).emit("draw", { x, y });
+  socket.on("draw", (data) => {
+    socket.to(data.code).emit("draw", data);
   });
 
   socket.on("disconnect", () => {

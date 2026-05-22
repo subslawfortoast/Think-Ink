@@ -104,3 +104,40 @@ body{
 .menu-box.home-button:hover{
     transform: none;
 }
+
+/*Game page layout (windowed canvas)*/
+.game-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #629c6f;
+    overflow: hidden;
+}
+
+.game-title{
+    font-size: 3rem;
+    color: #1f3528;
+
+    margin: 20px 0 10px 0;
+    transform: rotate(1deg);
+}
+
+/*Canvas*/
+#board {
+    width: 800px;
+    height: 500px;
+
+    max-width: 90vw;
+    max-height: 70vw;
+
+    background-color: white;
+
+    border: 5px solid #34633f;
+    border-radius: 12px;
+
+    cursor: crosshair;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
