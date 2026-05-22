@@ -15,8 +15,9 @@ const canvas = document.getElementById("board");
 const ctx = canvas.getContext("2d");
 
 //match css size
-canvas.width = canvas.clientWidth;
-canvas.height = canvas.clientHeight;
+const rect = canvas.getBoundingClientRect();
+canvas.width = rect.width;
+canvas.height = rect.height;
 
 //draw style
 ctx.lineWidth = 5;
@@ -38,12 +39,14 @@ function drawLine(x0, y0, x1, y1) {
 
 //mouse events
 canvas.addEventListener("mousedown", (e) => {
-    if (role !== "draw") return;
+        if (role !== "draw") return;
 
     drawing = true;
 
-    lastX = e.clientX - canvas.offsetLeft;
-    lastY = e.clientY - canvas.offsetTop;
+    const rect = canvas.getBoundingClientRect();
+
+    lastX = e.clientX - rect.left;
+    lastY = e.clientY - rect.top;
 });
 
 canvas.addEventListener("mouseup", (e) => {
@@ -56,7 +59,7 @@ canvas.addEventListener("mousemove", (e) => {
     const rect = canvas.getBoundingClientRect();
 
     const x = e.clientX - rect.left;
-    const y = e.cleintY - rect.top;
+    const y = e.clientY - rect.top;
 
     //draw locally
     drawLine(lastX, lastY, x, y);
