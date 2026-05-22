@@ -68,7 +68,11 @@ socket.on("joinGame", (code) => {
 
 // drawing (scoped to room)
   socket.on("draw", (data) => {
-    socket.to(data.code).emit("draw", data);
+      const room = [...socket.rooms].find(r => r !== socket.id);
+
+      if (!room) return;
+
+      socket.to(room).emit("draw", data);
   });
 
   socket.on("disconnect", () => {

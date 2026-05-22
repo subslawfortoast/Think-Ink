@@ -7,6 +7,8 @@ const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
 const role = params.get("role");
 
+socket.emit("joinGame", code);
+
 console.log("Room:", code);
 console.log("Role:", role);
 
@@ -39,7 +41,7 @@ function drawLine(x0, y0, x1, y1) {
 
 //mouse events
 canvas.addEventListener("mousedown", (e) => {
-        if (role !== "draw") return;
+    if (role !== "draw") return;
 
     drawing = true;
 
@@ -49,7 +51,7 @@ canvas.addEventListener("mousedown", (e) => {
     lastY = e.clientY - rect.top;
 });
 
-canvas.addEventListener("mouseup", (e) => {
+canvas.addEventListener("mouseup", () => {
     drawing = false;
 });
 
@@ -66,7 +68,6 @@ canvas.addEventListener("mousemove", (e) => {
 
     //send to server
     socket.emit("draw", {
-        code,
         x0: lastX,
         y0: lastY,
         x1: x,
