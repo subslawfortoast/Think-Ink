@@ -50,7 +50,7 @@ canvas.addEventListener("mouseup", (e) => {
     drawing = false;
 });
 
-canvase.addEventListener("mousemove", (e) => {
+canvas.addEventListener("mousemove", (e) => {
     if (!drawing || role !== "draw") return;
 
     const rect = canvas.getBoundingClientRect();
